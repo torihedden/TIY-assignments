@@ -1,9 +1,7 @@
 /**
  * For each of the following Array methods,
-
  * 1. use them in an example
  * 2. use console.log() to make the code run in the console!
-
  **/
 
 // .sort() Sorts all the values in a given array. Default is small number to large, strings are alphabetized.
@@ -14,7 +12,7 @@ console.log(myList.sort()); --> [ -1, 0, 13, 42, 6 ]
 var classMates = ["Tori", "Matt", "Alex", "Nicky"]
 console.log(classMates.sort()); --> [ "Alex", "Matt", "Nicky", "Tori" ]
 
-// .concat() Combines two arrays. The second array is added to the end of the first.
+// .concat() Combines two arrays. The second array is added to the end of the first. Does not alter the contents of the array, just puts them together.
 
 var choresList = ["dust", "mop", "dishes"]
 var newChores = ["laundry", "grocery shopping", "clean room"]
@@ -54,6 +52,9 @@ var classMates = [];
 classMates.push("Tori");
 console.log(classMates); --> ["Tori"];
 
+classMates.push("Greg");
+console.log(classMates); --> ["Tori", "Greg"]
+
 // .slice() Returns part of an area at indices [x, y), where index x is inclusive and index y is exclusive. Does not remove this value from the array.
 
 var redQueen = ["Off", "with", "her", "head", "!"]
@@ -67,14 +68,12 @@ console.log(redQueen.splice(3, 4)); --> [ "head", "!" ]
 console.log(redQueen); --> [ "Off", "with", "her" ]
 
 // .shift() Removes the first element in a given array, and returns that element.
-The shift() method removes the first element from an array and returns that element.
 
 var theTriangle = ["Raleigh", "Durham", "Chapel Hill"]
 console.log(theTriangle.shift()); --> Raleigh
 console.log(theTriangle); --> [ "Durham", "Chapel Hill" ]
 
-// .unshift()
-the unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
+// .unshift() adds element(s) to the beginning of an array, then returns the array with the added changes.
 
 var theTriangle = ["Durham", "Chapel Hill"]
 console.log(theTriangle.unshift("Raleigh"));
@@ -90,7 +89,7 @@ function isEven(x){
 
 console.log(someNumbers.filter(isEven)); --> [ 8, -2, 0, 4 ]
 
-// .map()
+// .map() generates a new array based on a given array. A function is called on every element in the original array.
 
 var myNumbers = [2.01, 4.3, 6.8, 8.4, 10.6, 12.5]
 var roundUp = myNumbers.map(Math.ceil);
