@@ -81,7 +81,7 @@ console.log(theTriangle); --> [ "Raleigh", "Durham", "Chapel Hill" ]
 
 // .filter() Takes elements from a new array, and applies a test to them. All elements that pass the test are added to a new array, which is returned.
 
-var someNumbers = [67, 8, -2, 0, 13, 9, 23, 4]
+var someNumbers = [67, 8, -2, 0, 13, 9, 23, 4] //Reads as "The variable someNumbers is assigned the array 67, 8, -2, 0..."
 
 function isEven(x){
   return x % 2 === 0;
