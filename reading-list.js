@@ -4,12 +4,14 @@
 //
 // Now use an if/else statement to change the output depending on whether you read it yet or not. If you read it, log a string like 'You already read "The Hobbit" by J.R.R. Tolkien', and if not, log a string like 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'
 
+//Object constructor
 function Book (bookTitle, author, alreadyRead) {
     this.bookTitle = bookTitle;
     this.author = author;
     this.alreadyRead = alreadyRead;
 }
 
+//a new Object (Book)
 var book1 = new Book();
   book1.bookTitle = "The Left Hand of Darkness";
   book1.author = "Ursula K. Le Guin"
@@ -25,15 +27,15 @@ var book3 = new Book();
   book3.author = "Marjane Satrapi";
   book3.alreadyRead = true;
 
-var myLibrary = [book1, book2, book3]
+var myLibrary = [book1, book2, book3];
 
 for (eachBook = 0; eachBook < myLibrary.length; eachBook++){
   console.log(myLibrary[eachBook].bookTitle + ", by " + myLibrary[eachBook].author)
 }
 
-=> The Left Hand of Darkness by Ursula K. Le Guin
-Stranger in a Strange Land by Robert Heinlein
-Persepolis by Marjane Satrapi
+//=> The Left Hand of Darkness, by Ursula K. Le Guin
+//Stranger in a Strange Land, by Robert Heinlein
+//Persepolis, by Marjane Satrapi
 
 for (x = 0; x < myLibrary.length; x++){
   if (myLibrary[x].alreadyRead){
@@ -42,3 +44,7 @@ for (x = 0; x < myLibrary.length; x++){
     console.log("You still haven't read " + myLibrary[x].bookTitle + " by " + myLibrary[x].author + ".");
   }
 }
+
+//=> You still haven't read The Left Hand of Darkness by Ursula K. Le Guin.
+//You have read Stranger in a Strange Land by Robert Heinlein.
+//You have read Persepolis by Marjane Satrapi.
