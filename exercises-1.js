@@ -86,7 +86,6 @@ var someNumbers = [67, 8, -2, 0, 13, 9, 23, 4]
 function isEven(x){
   return x % 2 === 0;
 }
-
 console.log(someNumbers.filter(isEven)); --> [ 8, -2, 0, 4 ]
 
 // .map() generates a new array based on a given array. A function is called on every element in the original array.
