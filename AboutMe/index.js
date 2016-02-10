@@ -6,7 +6,6 @@ body.style.fontFamily = "Arial, Helvetica, sans-serif";
 var fullNameSpan = document.querySelector("#fullname");
 fullNameSpan.textContent = "Tori Hedden";
 
-// how do I name these variables???
 var homeTownSpan = document.querySelector("#hometown");
 homeTownSpan.textContent = "Snellville, GA";
 
@@ -30,11 +29,9 @@ for (var myCount = 0; myCount < listItems.length; myCount ++){
   listItems[myCount].style.color = "red";
 }
 
-
 // Create a new img element and set its src attribute to a picture of you. Append that element to the page.
 
 var profilePic = document.createElement("img");
 profilePic.src = "https://avatars1.githubusercontent.com/u/16636389?v=3&s=460";
-
 
 body.appendChild(profilePic);
