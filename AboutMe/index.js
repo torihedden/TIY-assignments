@@ -33,6 +33,8 @@ for (var myCount = 0; myCount < listItems.length; myCount ++){
 
 // Create a new img element and set its src attribute to a picture of you. Append that element to the page.
 
-//document.write('<img src= "https://avatars1.githubusercontent.com/u/16636389?v=3&s=460">');
+var profilePic = document.createElement("img");
+profilePic.src = "https://avatars1.githubusercontent.com/u/16636389?v=3&s=460";
 
-//https://avatars1.githubusercontent.com/u/16636389?v=3&s=460
+
+body.appendChild(profilePic);
