@@ -1,5 +1,5 @@
-var firstAge = 0;
-var secondAge = 0;
+// var firstAge = 0;
+// var secondAge = 0;
 
 function calculateAge(birthYear, currentYear){
    var yourAge = (currentYear - birthYear)-1;
