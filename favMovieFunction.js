@@ -14,5 +14,7 @@ function movieInfo() {
     console.log(favMovie.title + " lasts for " + favMovie.duration + " minutes. Stars include: " + movieStars);
 }
 
-movieInfo();
-// console.log(movieStars); //=>movieStars is not defined outside the function movieInfo. It isn't global?
+movieInfo(); // => Blade Runner lasts for 120 minutes. Stars include: Harrison Ford, Sean Young, and Rutger Hauer.
+
+
+// console.log(movieStars); => undefined //=>movieStars is not defined outside the function movieInfo. It isn't global?
