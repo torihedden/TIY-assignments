@@ -1,11 +1,15 @@
 ##How does the API handle authentication?
 "All API access is over HTTPS, and accessed from the https://api.github.com. All data is sent and received as JSON."
+There are three ways to authenticate through GitHub API v3. Requests that require authentication will return 404 Not Found, instead of 403 Forbidden, in some places. This is to prevent the accidental leakage of private repositories to unauthorized users.
 
 ##Do I need to authenticate?
-If you want to make more calls to the API, then yes. "Read more about unauthenticated rate limiting."
+To make API requests, you don't have to authenticate. However, if you want to make more calls to the API, then yes, you do need to authenticate. Authenticated requests can make up to 5,000 requests per hour. For unauthenticated requests, the rate limit is up to 60 requests per hour.
 
 ##What can I do with an unauthenticated request?
+You can make the same requests to the API, but far fewer in number. You can see your current rate limit status, AKA how many requests you have made that hour, and see how many you have left. This doesn't count as an API hit.
 
+
+making a conditional request and receiving a 304 response does not count against your Rate Limit, so we encourage you to use it whenever possible.
 
 ##How can I authenticate my request? (3 ways)
 
@@ -28,13 +32,21 @@ curl 'https://api.github.com/users/whatever?client_id=xxxx&client_secret=yyyy'"
 
 ##How do I ask the API for...
   ##The profile information for a specific user?
+    GET /user
+    (https://api.github.com/users/usernamehere)
+    Get a single user  GET /users/:username
 
   ##The repository listing for a specific user?
+    GET /user/repos
+    "List public repositories for the specified user.
+    GET /users/:username/repos"
 
-  The recent, public activity for a specific user?
+  ##The recent, public activity for a specific user?
+    GET /events
 
 ##Is there a limit to the number of requests I can make?
-yes
+yes. see below
+
 ##Is there a way of extending that limit?
 yes, authenticate
 "For requests using Basic Authentication or OAuth, you can make up to 5,000 requests per hour. For unauthenticated requests, the rate limit allows you to make up to 60 requests per hour. Unauthenticated requests are associated with your IP address, and not the user making requests. Note that the Search API has custom rate limit rules."
@@ -42,6 +54,7 @@ yes, authenticate
 ##What happens when I hit the limit?
 "Once you go over the rate limit you will receive an error response:"
 403 Forbidden
+You will not be able to make any more requests from the API, and any components of your site built with requests to the API will not load.
 
 ##What if there is a lot of data returned?
 "Requests that return multiple items will be paginated to 30 items by default. You can specify further pages with the ?page parameter. For some resources, you can also set a custom page size up to 100 with the ?per_page parameter. Note that for technical reasons not all endpoints respect the ?per_page parameter, see events for example."
@@ -58,18 +71,35 @@ Example: When you get a list of repositories, you get the summary representation
 
 ##How do I know that there is more data available?
 
+
+
+"Endpoint	Defines the address or connection point to a Web service. It is typically represented by a simple HTTP URL string."
 ##What are the endpoints for fetching...
   ##the profile data for a user?
+
+
   ##the organizations a user belongs to?
+
   ##the repositories a user has created?
+
   ##a filtered list of repositories?
+
   ##a sorted list of repositories?
+
   ##public events for a user?
+
+"Events support pagination, however the per_page option is unsupported. The fixed page size is 30 items. Fetching up to ten pages is supported, for a total of 300 events."
 
 ##When fetching public events for a user...
   ##How many results are returned by default?
+    "Only events created within the past 90 days will be included in timelines. Events older than 90 days will not be included (even if the total number of events in the timeline is less than 300)."
+
   ##What limitations exist on fetching more results?
+
   ##What is the basic structure of the results?
+
   ##What fields are included in each result?
+
   ##What are the data types for each field?
+
   ##What are some of the different values for the type field?
