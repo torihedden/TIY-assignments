@@ -1,4 +1,4 @@
-var animalChoices = ["cats", "kittens", "puppies", "dogs", "hedgehogs"];
+var animalChoices = ["cats", "kittens", "puppies", "dogs", "hedgehogs", "snakes"];
 
 var foodChoices = ["sushi", "candy", "Indian food", "tacos"];
 
@@ -10,7 +10,7 @@ var myChoices = function(array, rank){
         rankFormat = rank + "nd";
     } else if (rank === 3){
         rankFormat = rank + "rd";
-    } else if (rank === 4){
+    } else {
         rankFormat = rank + "th";
     }
 
@@ -20,3 +20,4 @@ var myChoices = function(array, rank){
 myChoices(animalChoices, 3); // => "My 3rd choice is puppies."
 myChoices(foodChoices, 2); // => "My 2nd choice is candy."
 myChoices(animalChoices, 4);// => "My 4th choice is dogs."
+myChoices(animalChoices, 6);// => "My 6th choice is snakes."
