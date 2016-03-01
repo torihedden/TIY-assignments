@@ -1,7 +1,7 @@
 var countTags = function(element){
     var tagCount = 0;
     $("*").each(function() {
-        if ($(this) === $(element)){
+        if ($(this).is($(element))){
             tagCount += 1;
         }
     });
