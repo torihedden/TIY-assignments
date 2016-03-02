@@ -1,12 +1,12 @@
-var checkEven = function(number){
-    for (number = 0; number <=21044; number++){
-    if (number % 2 === 0){
-        console.log(number + " is even");
+var checkEven = function(number1, number2){
+    for (i = number1; i <= number2; i++){
+    if (i % 2 === 0){
+        console.log(i + " is even");
     } else {
-        console.log(number + " is odd");
+        console.log(i + " is odd");
     }
     }
 };
 
 
-checkEven();
+checkEven(0, 21044);
