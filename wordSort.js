@@ -2,17 +2,18 @@
 
 var wordSort = function(word){
 
-    var newWord = word.split("");
-    var sortWord = newWord.sort();
+    var splitWord = word.split("");
+    var sortWord = splitWord.sort();
     var trimWord = sortWord.join("");
-    return trimWord.trim(); //removes whitespace from both ends of a string
+    return trimWord.trim(); //removes whitespace from both ends of a string, although in this case there will only be leading whitespace
 };
 
 wordSort("victoria");
 // => 'aciiortv'
 
-wordSort("Victoria Michelle Hedden");
-// => 'HMVaccddeeeehiiillnort'
+wordSort("victoria michelle hedden");
+// => 'accddeeeehhiiillmnortv'
 
-// wordSort("voldemort");
-// // => 'delmoortv'
+wordSort("kathryn amanda hedden");
+
+wordSort("the quick brown fox jumps over the lazy dog");
