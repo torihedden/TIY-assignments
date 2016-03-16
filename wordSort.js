@@ -2,7 +2,8 @@
 
 var wordSort = function(word){
 
-    var splitWord = word.split("");
+    var lowerWord = word.toLowerCase();
+    var splitWord = lowerWord.split("");
     var sortWord = splitWord.sort();
     var trimWord = sortWord.join("");
     return trimWord.trim(); //removes whitespace from both ends of a string, although in this case there will only be leading whitespace
@@ -11,9 +12,9 @@ var wordSort = function(word){
 wordSort("victoria");
 // => 'aciiortv'
 
-wordSort("victoria michelle hedden");
+wordSort("Victoria Michelle Hedden");
 // => 'accddeeeehhiiillmnortv'
 
-wordSort("kathryn amanda hedden");
+// wordSort("kathryn amanda hedden");
 
-wordSort("the quick brown fox jumps over the lazy dog");
+// wordSort("the quick brown fox jumps over the lazy dog");
