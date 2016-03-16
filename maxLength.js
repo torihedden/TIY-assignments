@@ -1,3 +1,6 @@
+// Write a JS function that accepts the list of country names as inputs and returns the longest one.
+
+
 var sample = ["USA", "Germany", "India"];
 var lengthArray = [];
 
@@ -21,3 +24,4 @@ var longerCountry = function(array){
 };
 
 longerCountry(sample);
+// => 'Germany'
