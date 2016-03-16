@@ -1,10 +1,18 @@
+// Write a JavaScript function that retuns a passed string with letters in alphabetical order.
+
 var wordSort = function(word){
 
     var newWord = word.split("");
-    console.log(newWord);
     var sortWord = newWord.sort();
-    return sortWord.join("");
+    var trimWord = sortWord.join("");
+    return trimWord.trim(); //removes whitespace from both ends of a string
 };
 
 wordSort("victoria");
 // => 'aciiortv'
+
+wordSort("Victoria Michelle Hedden");
+// => 'HMVaccddeeeehiiillnort'
+
+// wordSort("voldemort");
+// // => 'delmoortv'
