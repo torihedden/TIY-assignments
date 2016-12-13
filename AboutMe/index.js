@@ -2,6 +2,10 @@
 var body = document.querySelector("body");
 body.style.fontFamily = "Arial, Helvetica, sans-serif";
 
+// Styles the text in the header to be color blue.
+var blueHeader = document.querySelector("h1");
+blueHeader.style.color = "blue";
+
 // Using JavaScript, replace each of the spans with your own information.
 var fullNameSpan = document.querySelector("#fullname");
 fullNameSpan.textContent = "Tori Hedden";
@@ -34,4 +38,8 @@ for (var myCount = 0; myCount < listItems.length; myCount ++){
 var profilePic = document.createElement("img");
 profilePic.src = "https://avatars1.githubusercontent.com/u/16636389?v=3&s=460";
 
+//adds to the body (defined on line 2) a child that is profilePic (defined on line 38)
 body.appendChild(profilePic);
+
+// Sets the width of profilePic to 300 px.
+profilePic.width = "300";

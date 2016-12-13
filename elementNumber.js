@@ -8,4 +8,7 @@ var countTags = function(element){
     return "There are " + tagCount + " tags of type " + element + " on the page.";
 };
 
-countTags('p');
+console.log(countTags('p'));
+
+
+console.log("hello world");

@@ -7,3 +7,6 @@ var fetaHoneyBread = {
 console.log(fetaHoneyBread.title);
 console.log("Serves: " + fetaHoneyBread.servings);
 console.log("Ingredients:" + fetaHoneyBread.ingredients[0] + fetaHoneyBread.ingredients[1] + fetaHoneyBread.ingredients[2] + fetaHoneyBread.ingredients[3] + fetaHoneyBread.ingredients[4]+ fetaHoneyBread.ingredients[5]);
+//should have used a for loop like you originally thought
+
+console.log(fetaHoneyBread.ingredients)

@@ -1,8 +1,8 @@
 function verbing(yourString){
     if (yourString[yourString.length-1] === "g"){
-            console.log(yourString + "ly")
+            console.log(yourString + "ly");
     } else if (yourString.length >= 3){
-        console.log(yourString + "ing")
+        console.log(yourString + "ing");
     } else
         console.log(yourString);
 }
